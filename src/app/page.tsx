@@ -240,18 +240,18 @@ export default function Home() {
       <div className="max-w-5xl mx-auto space-y-6">
         
         {/* Header */}
-        <div className="flex items-center justify-between backdrop-blur-md bg-white/30 dark:bg-slate-900/50 p-4 rounded-2xl border border-white/20 shadow-sm">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-primary-foreground shadow-inner">
+        <div className="flex items-center justify-between backdrop-blur-md bg-white/30 dark:bg-slate-900/50 p-4 rounded-2xl border border-white/20 shadow-sm gap-2">
+          <div className="flex items-center gap-3 min-w-0">
+            <div className="w-10 h-10 shrink-0 bg-primary rounded-xl flex items-center justify-center text-primary-foreground shadow-inner">
               <Mail className="w-5 h-5" />
             </div>
-            <div>
-              <h1 className="text-xl font-bold tracking-tight">AI HR Email Automation</h1>
-              <p className="text-sm text-muted-foreground">Send Job Application in One Click</p>
+            <div className="min-w-0">
+              <h1 className="text-lg sm:text-xl font-bold tracking-tight truncate">AI HR Email Automation</h1>
+              <p className="text-xs sm:text-sm text-muted-foreground truncate hidden sm:block">Send Job Application in One Click</p>
             </div>
           </div>
-          <div className="flex items-center gap-4">
-            <Badge variant="outline" className="px-3 py-1 bg-white/50 dark:bg-slate-800">
+          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
+            <Badge variant="outline" className="hidden sm:inline-flex px-3 py-1 bg-white/50 dark:bg-slate-800 truncate max-w-[150px]">
               {session.user?.email}
             </Badge>
             <Button variant="ghost" size="icon" onClick={() => signOut()}>
